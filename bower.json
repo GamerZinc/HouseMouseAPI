@@ -1,0 +1,22 @@
+{
+  "name": "housemouseapi",
+  "description": "House Mouse Home Automation API",
+  "main": "app.js",
+  "authors": [
+    "Robert Porter"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "simpleWeather": "^3.1.0",
+    "flipclock": "FlipClock#^0.7.7",
+    "bootstrap": "^3.3.6"
+  }
+}

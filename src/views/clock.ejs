@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="../lib/flipclock/compiled/flipclock.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../lib/flipclock/compiled/flipclock.min.js"></script>
+  <title>House Mouse|<%=title%></title>
+  <style>
+    html { 
+        display:table;
+        height:100%;
+        width:100%;
+        background-color: #000;
+    }
+    .content {
+        text-align:center;
+        width: 550px;
+        height: 200px;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .todaysDate {
+        font: normal 48px "Helvetica Neue", Helvetica, sans-serif;
+        padding-top: 10px;
+        color: #fff;
+    }
+  </style>
+  </head>
+<body>
+    <div class="content">
+        <div class="clock"></div>
+        <div class="todaysDate" id="todaysDate"></div>
+        <script>
+            var clock;
+			$(document).ready(function() {
+				var date = new Date();
+				clock = $('.clock').FlipClock(date, {
+					clockFace: 'TwelveHourClock'
+                });
+                document.getElementById("todaysDate").innerHTML = date.toDateString();
+			});
+        </script>
+    </div>
+</body>
+</html>
